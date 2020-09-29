@@ -20,5 +20,6 @@ end
 Then('{string} should appear') do |string|
   @msg = string
   expect(@driver.find_element(:id, 'flash').text).to include(@msg)
+  @driver.quit
 end
 #push test
